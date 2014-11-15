@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
     
     # Edit the following line and uncomment it 
     # adserver_uri = "http://<your_ad_server_goes_here>/index.php"
+	 adserver_uri = "http://adserv.team13.isucdc.com/index.php"
     
     unless adserver_uri.nil?
       @url_of_ad_image = Net::HTTP.get URI(adserver_uri)

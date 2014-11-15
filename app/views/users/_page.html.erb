@@ -13,26 +13,8 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <% if @user.id.nil? %>
       <%= f.text_field :name %>
-    <% else %>
-      <%= f.text_field :name, :readonly => "readonly" %>
-    <% end %>
   </div>
-  <% if session[:user_id].to_i != 0 and User.find(session[:user_id]).administrator %>
-  <div class="field">
-    <%= f.label :poster %><br />
-    <%= f.check_box :poster %>
-  </div>
-  <div class="field">
-    <%= f.label :moderator %><br />
-    <%= f.check_box :moderator %>
-  </div>
-  <div class="field">
-    <%= f.label :administrator %><br />
-    <%= f.check_box :administrator %>
-  </div>
-  <% else %>
     <div class="field">
     <p style="display:none;">If you need to be a poster please ask an admin</p>
   </div>
@@ -42,7 +24,6 @@
   <div class="field">
     <p style="display:none;">If you need to be an admin, ask an admin</p>
   </div>
-  <% end %>
   <div class="field">
     <%= f.label :password %><br />
     <% if @user.password.nil? %>

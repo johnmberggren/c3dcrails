@@ -34,13 +34,13 @@
   </div>
   <% else %>
     <div class="field">
-    <p style="display:none;">If you need to be a poster please ask an admin</p>
+    <%= f.hidden_field :poster, :value => false %>
   </div>
   <div class="field">
-    <p style="display:none;">If you need to be a moderator please ask an admin</p>
+    <%= f.hidden_field :moderator, :value => false %>
   </div>
   <div class="field">
-    <p style="display:none;">If you need to be an admin, ask an admin</p>
+    <%= f.hidden_field :administrator, :value => false %>
   </div>
   <% end %>
   <div class="field">
